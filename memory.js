@@ -8,7 +8,7 @@ let images = ["1pic", "2pic", "3pic", "4pic", "5pic"];
 let check = [];
 let checkFirst = true;
 let checkSecond = true;
-let prevTarget = "/img/back.jpg";
+let prevTarget;
 prepareArray(); 
 container.addEventListener("click", function(elem) {
   if (checkFirst && checkSecond && elem.target.src != prevTarget)  
