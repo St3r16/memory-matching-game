@@ -15,15 +15,12 @@ container.addEventListener("click", function(elem) {
     cardFlip(elem);
 });
 
-button.addEventListener("click", function() {  
-  location.reload();
-});
-
 function cardsAdd(elem) {
   container.innerHTML += `<div class="flip-container"><div class="flipper"><div class="front"><img src="./img/backCard.jpg" /></div><div class="back"><img src="./img/${elem}.jpg "</div></div></div>`;
 }
-
 images.forEach(elem => cardsAdd(elem));
+
+
 function cardFlip(elem) {
   let target = elem.target;
   while (target != container) {
@@ -86,6 +83,10 @@ function popUp() {
   modalWindow.classList.toggle("modal-up"); 
   modalContent.classList.toggle("modal-content-up");
 }
+
+button.addEventListener("click", function() {  
+  location.reload();
+});
 
 function setChecking1(expr) {
   checkFirst = expr;
